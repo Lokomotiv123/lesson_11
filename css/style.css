@@ -1,0 +1,249 @@
+
+body{
+	
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.wrapper {
+	position: relative;
+	overflow: clip;
+	min-height: 100%;
+}
+
+[class*="__container"] {
+	max-width: 941px;
+	margin: 0 auto;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	background-color: rgba(248, 147, 84, 0.788);
+	z-index: 100;
+	padding: 15px;
+}
+
+
+.header__menu {
+	text-align: center;
+}
+.menu {
+	font-size: 0;
+}
+.menu__item {
+	position: relative;
+	display: inline-block;
+}
+
+.menu__item:hover .sub-menu{
+	opacity: 1;
+	visibility: visible;
+	top: 100%;
+
+}
+.menu__item:not(:last-child){
+	margin-right: 100px;
+}
+.menu__link {
+	color: rgb(204, 12, 237);
+	font-size: 25px;
+	display: inline-block;
+	padding: 5px 0px;
+}
+.sub-menu {
+	background-color: green;
+	padding: 10px;
+	position: absolute;
+	top: 150%;
+	left: 0;
+	min-width: 250px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease 0s;
+}
+
+.sub-menu__item:not(:last-child){
+	margin-bottom: 10px;
+}
+.sub-menu__link {
+	font-size: 16px;
+}
+
+/* відпрацювання позицінювання */
+.section {
+	background-color: #eee;
+	padding: 50px;
+	position: relative;
+	height: 800px;
+	
+}
+
+
+.section--margin-bottom{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.items__item {
+	padding: 15px;
+	text-align: center;
+	color: white;
+	font-weight: 700;
+	top: 0;
+}
+
+.items__item--bg-brown {
+	background-color: brown;
+	position: absolute;
+	top: 50px;
+	right: 0;
+}
+.items__item--bg-purple {
+	padding-top: 70px;
+	min-height: 100px;
+	background-color: purple;
+	position: sticky;
+	
+}	
+.items__item--bg-green {
+	background-color: green;
+	padding-top: 70px;
+	min-height: 100px;
+	position: sticky;
+}
+
+.items__item--bg-red {
+	background-color: red;
+	position: fixed;
+	top: 200px;
+	left: 0;
+	
+}
+
+.items__item--bg-blue{
+	background-color: blue;
+	border: 5px double red;
+	outline: 6px yellow;
+	outline-style: dotted;
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+	
+
+/* список по іншому */
+
+.another-one--margin-bottom{
+	padding-top: 100px;
+	margin-bottom: 100px;
+}
+
+.another-one__container{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.list__item {
+	line-height: 1.2;
+	position: relative;
+	padding-left: 30px;
+}
+
+.list__item::before {
+	content: "";
+	background: url("../img/icons/cector.svg") 0 0 / 100% no-repeat;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 2px;
+	left: 0;
+	transition: all 0.3s ease 0s;
+}
+
+.list__item:hover::before {
+	left: 5px;
+}
+
+.list__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+
+/* Налаштування машини */
+.car {
+	min-height: 1000px;
+	background: url('../img/road.webp') 0 0 / auto 1000px no-repeat;
+}
+
+.car--position{
+	padding-top: 380px;
+
+}
+
+.items-car {
+	position: relative;
+}
+.items-car:hover{
+	transform: translate(0px, 100px) scale(0.2) rotate(-7deg);
+}
+.items-car::after{
+	content: "";
+	background: 
+	url('../img/pngfind.com-delorean-png-2881233.webp') 0 0 no-repeat,
+   url('../img/2.webp') 130px 250px no-repeat,
+	url('../img/2.webp') 680px 280px no-repeat;
+	width: 941px;
+	height: 525px;
+	position: absolute;
+	left: 1px;
+	top: -7px;
+	z-index: 5;
+	transform: scale(5);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.items-car:hover::after {
+	opacity: 1;
+	visibility: visible;
+}
+
+.items-car__item {
+	position: absolute;
+}
+.items-car__item--1 {
+	top: 0;
+	left: 1px;
+}
+
+.items-car__item--2 {
+	left: 109px;
+   top: 179px;
+}
+.items-car__item--3 {
+	left: 109px;
+	top: -6px;
+}
+.items-car__item--4 {
+	left: 277px;
+   top: 38px;
+}
+
+.items-car__item--5 {
+	left: 277px;
+	top: 149px;
+}
+.items-car__item--6 {
+	right: 115px;
+	top: 178px;
+}
+.items-car__item--7 {
+	right: 27px;
+	top: 74px;
+}
+.items-car__item--8 {
+	right: 0px;
+   top: 178px;
+}
+
